@@ -2,6 +2,11 @@ package es.datastructur.lab2demo.solution;
 
 import java.util.ArrayList;
 
+/**
+ * Let's get this bread!
+ * @author Elana Ho
+ */
+
 public class CS61Bakery {
 
     private int stock;
