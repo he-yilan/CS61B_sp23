@@ -43,6 +43,7 @@ public class CS61Bakery {
         if (amountBought > stock) {
             amountBought = stock;
         }
+        stock -= amountBought;
         purchaseRecord.add(amountBought);
         System.out.println("You bought " + amountBought + " loaves!");
         return amountBought;
