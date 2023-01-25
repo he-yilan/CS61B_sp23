@@ -37,7 +37,10 @@ public class CS61BakeryTest {
         assertEquals(purchaseRecord, CS61B.getPurchaseRecord());
         CS61B.restock(100);
         CS61B.buy(64);
+        purchaseRecord.add(16);
         CS61B.buy(33);
-        assertEquals(16, CS61B.getMaxPurchase());
+        purchaseRecord.add(8);
+        int maxPurchase = CS61B.getMaxPurchase();
+        assertEquals(16, maxPurchase);
     }
 }

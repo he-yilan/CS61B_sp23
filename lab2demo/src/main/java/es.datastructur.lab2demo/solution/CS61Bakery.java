@@ -67,7 +67,7 @@ public class CS61Bakery {
     public int getMaxPurchase() {
         int maxPurchase = purchaseRecord.get(0);
         for (int i = 0; i < purchaseRecord.size(); i++) {
-            if (maxPurchase > purchaseRecord.get(i)) {
+            if (maxPurchase < purchaseRecord.get(i)) {
                 maxPurchase = purchaseRecord.get(i);
             }
         }
