@@ -29,6 +29,9 @@ public class Dessert implements Comparable<Dessert> {
         return flavor + nutrition - cost;
     }
 
+    /**
+     * Compares desserts according to the number of votes each receives.
+     */
     @Override
     public int compareTo(Dessert d) {
         return this.votes - d.getVotes(); // if positive, it means d1 is better

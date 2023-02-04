@@ -2,6 +2,9 @@ import java.util.Comparator;
 
 public class DessertComparator implements Comparator<Dessert> {
 
+    /**
+     * Compares desserts according to their votes but uses the attribute of enjoyment as a tiebreaker.
+     */
     @Override
     public int compare(Dessert d1, Dessert d2) {
         if (d1.compareTo(d2) != 0) {
@@ -14,6 +17,8 @@ public class DessertComparator implements Comparator<Dessert> {
             } else if (enjoyment2 > enjoyment1) {
                 return -1;
             } else {
+                return 0;
+                /*
                 int difference = d1.getName().compareTo(d2.getName());
                 if (difference > 0) {
                     return 1;
@@ -22,10 +27,13 @@ public class DessertComparator implements Comparator<Dessert> {
                 } else {
                     return 0;
                 }
+
+                 */
             }
         }
     }
 
+    /*
     public static void main(String[] args) {
         DessertComparator dc = new DessertComparator();
         Dessert cheesecake = new Dessert("cheesecake", 4, 5, 5, 4);
@@ -37,4 +45,6 @@ public class DessertComparator implements Comparator<Dessert> {
             System.out.println("Let's get cheesecake!");
         }
     }
+
+     */
 }
