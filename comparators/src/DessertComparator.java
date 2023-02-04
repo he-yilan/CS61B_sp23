@@ -3,18 +3,18 @@ import java.util.Comparator;
 public class DessertComparator implements Comparator<Dessert> {
 
     /**
-     * Compares desserts according to their votes but uses the attribute of enjoyment as a tiebreaker.
+     * Compares desserts according to their votes but uses the attribute of flavor as a tiebreaker.
      */
     @Override
     public int compare(Dessert d1, Dessert d2) {
         if (d1.compareTo(d2) != 0) {
             return d1.compareTo(d2);
         } else {
-            int enjoyment1 = d1.getEnjoyment();
-            int enjoyment2 = d2.getEnjoyment();
-            if (enjoyment1 > enjoyment2) {
+            int f1 = d1.getFlavor();
+            int f2 = d2.getFlavor();
+            if (f1 > f2) {
                 return 1;
-            } else if (enjoyment2 > enjoyment1) {
+            } else if (f2 > f1) {
                 return -1;
             } else {
                 return 0;

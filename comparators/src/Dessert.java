@@ -7,26 +7,19 @@ public class Dessert implements Comparable<Dessert> {
     private String name;
     private int votes;
     private int flavor;
-    private int nutrition;
-    private int cost;
 
-    public Dessert(String name, int votes, int flavor, int nutrition, int cost) {
+    public Dessert(String name, int votes, int flavor) {
         this.name = name;
+        this.votes = votes;
         this.flavor = flavor;
-        this.nutrition = nutrition;
-        this.cost = cost;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public int getVotes() {
         return votes;
     }
 
-    public int getEnjoyment() {
-        return flavor + nutrition - cost;
+    public int getFlavor() {
+        return flavor;
     }
 
     /**
