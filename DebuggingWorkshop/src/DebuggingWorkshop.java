@@ -12,7 +12,7 @@ public class DebuggingWorkshop {
         description = "CSM Debugging Workshop!";
         date = "February 16, 2023";
         time = "5:00 - 6:00 PM";
-        location = "Wozniak Lounge";
+        location = "Cory 540AB";
         comeToDebuggingWorkshop = true;
         debuggingSkills = 100;
     }
