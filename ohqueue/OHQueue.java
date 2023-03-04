@@ -1,17 +1,16 @@
 package ohqueue;
 
+import java.util.Iterator;
+
 /** Part b */
-public class OHQueue /** ___________________________; */ {
+public class OHQueue implements Iterable{
     private OHRequest queue;
 
     public OHQueue(OHRequest queue) {
-        /** ___________________________; */
+        this.queue = queue;
     }
 
-    /**
-     @Override
-     ______________ ______________ ______________ {
-        _________________________________;
-     }
-     */
+    public Iterator<OHRequest> iterator() {
+        return new TYIterator(queue);
+    }
 }

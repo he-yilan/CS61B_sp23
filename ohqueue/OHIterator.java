@@ -1,41 +1,41 @@
 package ohqueue;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /** Part a */
-public class OHIterator /** ___________________________ */ {
+public class OHIterator implements Iterator {
     private OHRequest curr;
 
     public OHIterator(OHRequest queue) {
-        /** ___________________________; */
+        curr = queue;
     }
 
     public static boolean isGood(String description) {
         return description.length() >= 5;
     }
 
-    /**
+
      @Override
-     ______________ ______________ ______________ {
+     public boolean hasNext() {
 
-         while (__________________________) {
-            __________________________;
+         while (curr != null && isGood(curr.description)) {
+            curr = curr.next;
          }
-         if (__________________________) {
-            __________________________;
+         if (curr == null) {
+            return false;
          }
-        __________________________;
+        return true;
      }
-     */
 
-    /**
      @Override
-     ______________ ______________ ______________ {
+     public OHRequest next() {
 
-         if (__________________________) {
-            ____________________________________________________;
+         if (!hasNext()) {
+            throw new NoSuchElementException();
          }
-         ________________________________;
-         __________________________;
-         __________________________;
+         OHRequest currRequest = curr;
+         curr = curr.next;
+         return currRequest;
      }
-     */
 }

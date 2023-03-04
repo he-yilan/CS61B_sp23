@@ -21,8 +21,8 @@ public class UnionFindTest {
     public void union() {
         UnionFind u = new UnionFind(5);
         u.union(0,1);
-        assertEquals(1, u.findRecursive(1));
-        assertEquals(1, u.findRecursive(0));
+        assertEquals(1, u.find(1));
+        assertEquals(1, u.find(0));
         u.union(2,3);
         u.union(0,2);
         u.union(2, 4);
@@ -32,13 +32,13 @@ public class UnionFindTest {
     public void find() {
         UnionFind u = new UnionFind(6);
         u.union(0,1);
-        assertEquals(1, u.findRecursive(1));
-        assertEquals(1, u.findRecursive(0));
+        assertEquals(1, u.find(1));
+        assertEquals(1, u.find(0));
         u.union(2,3);
         u.union(0,2);
-        assertEquals(3, u.findRecursive(1));
-        assertEquals(3, u.findRecursive(2));
-        assertEquals(3, u.findRecursive(3));
+        assertEquals(3, u.find(1));
+        assertEquals(3, u.find(2));
+        assertEquals(3, u.find(3));
         assertEquals(4, u.sizeOf(0));
         assertEquals(4, u.sizeOf(1));
         assertEquals(4, u.sizeOf(2));
@@ -50,13 +50,13 @@ public class UnionFindTest {
     public void findRecursive() {
         UnionFind u = new UnionFind(6);
         u.union(0,1);
-        assertEquals(1, u.findRecursive(1));
-        assertEquals(1, u.findRecursive(0));
+        assertEquals(1, u.find(1));
+        assertEquals(1, u.find(0));
         u.union(2,3);
         u.union(0,2);
-        assertEquals(3, u.findRecursive(1));
-        assertEquals(3, u.findRecursive(2));
-        assertEquals(3, u.findRecursive(3));
+        assertEquals(3, u.find(1));
+        assertEquals(3, u.find(2));
+        assertEquals(3, u.find(3));
         assertEquals(4, u.sizeOf(0));
         assertEquals(4, u.sizeOf(1));
         assertEquals(4, u.sizeOf(2));

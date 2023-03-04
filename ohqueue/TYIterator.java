@@ -1,11 +1,20 @@
 package ohqueue;
 
+import java.util.Iterator;
+
 /** Part d */
-public class TYIterator /** _______________________________ */  {
+public class TYIterator extends OHIterator {
     public TYIterator(OHRequest queue) {
-        /** ___________________________; */
+        super(queue);
     }
 
-    // we probably need something here...
+    @Override
+    public OHRequest next() {
+        OHRequest result = super.next();
+        if (result != null && result.description.contains("thank u")) {
+            result = super.next();
+        }
+        return result;
+    }
 
 }
